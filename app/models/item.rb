@@ -1,5 +1,9 @@
 class Item < ApplicationRecord
   def message
-    "Item name is #{name}"
+    if name.present?
+      "Item name is #{name}"
+    else
+      "Item name is empty."
+    end
   end
 end
